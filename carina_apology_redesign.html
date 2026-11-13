@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff7f8">
+<meta name="description" content="A little heartfelt apology, made especially for Carina.">
+<title>For Carina ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fffaf7;--paper:#fffdfb;--blush:#fff0f4;--pink:#e99ab1;
+  --rose:#bd6682;--deep:#714455;--ink:#493740;--muted:#927985;
+  --line:#f0dce3;--shadow:0 22px 65px rgba(129,66,91,.10);
+  --serif:"Cormorant Garamond",Georgia,serif;--sans:"DM Sans",Arial,sans-serif;
+  --script:"Caveat",cursive;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+
+.memory-photo {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);overflow-x:hidden}
+button,a{font:inherit;-webkit-tap-highlight-color:transparent}
+button{cursor:pointer}
+a{color:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--rose);outline-offset:4px}
+.topbar{height:66px;position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,5vw,70px);background:rgba(255,250,247,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(240,220,227,.8)}
+.brand{font:600 25px var(--serif);color:var(--deep);text-decoration:none}
+.brand span{color:var(--rose)}
+.nav{display:flex;gap:24px;align-items:center}
+.nav a{text-decoration:none;color:var(--muted);font-size:12px;letter-spacing:.04em}
+.nav a:hover{color:var(--rose)}
+.menu-btn{display:none;border:1px solid var(--line);background:white;color:var(--deep);border-radius:50%;width:40px;height:40px;font-size:18px}
+.progress{height:3px;position:sticky;top:66px;z-index:19;background:#f8e7ec}
+.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pink),var(--rose));transition:width .12s}
+section{padding:100px 22px;position:relative}
+.wrap{width:min(100%,960px);margin:auto}
+.center{text-align:center}
+.kicker{font-size:10px;text-transform:uppercase;letter-spacing:.24em;font-weight:700;color:var(--rose)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--deep);line-height:1.05;margin:0}
+h1{font-size:clamp(54px,9vw,100px);margin:20px 0 16px}
+h2{font-size:clamp(39px,6vw,64px);margin:14px 0 18px}
+h3{font-size:30px;margin:10px 0}
+p{line-height:1.85}
+.lead{max-width:660px;margin:0 auto;color:var(--muted);font-size:15px;line-height:1.9}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:15px 24px;background:var(--rose);color:white;text-decoration:none;font-weight:700;font-size:12px;letter-spacing:.03em;box-shadow:0 12px 28px rgba(189,102,130,.22);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(189,102,130,.28)}
+.btn.secondary{background:white;color:var(--rose);border:1px solid var(--line);box-shadow:none}
+.hero{min-height:calc(100svh - 69px);display:grid;place-items:center;overflow:hidden;text-align:center;background:radial-gradient(ellipse at 18% 20%,#ffe5ed 0,transparent 35%),radial-gradient(ellipse at 86% 78%,#f7e4ec 0,transparent 34%),linear-gradient(135deg,#fffaf7,#fff4f6)}
+.hero:before,.hero:after{content:"✿";position:absolute;color:rgba(189,102,130,.15);font-size:clamp(130px,25vw,300px);font-family:var(--serif);pointer-events:none}
+.hero:before{left:-55px;top:8%;transform:rotate(-24deg)}.hero:after{right:-55px;bottom:0;transform:rotate(22deg)}
+.hero-inner{position:relative;z-index:1;max-width:800px}
+.hero-mark{font-size:50px;filter:drop-shadow(0 8px 12px #e99ab144);animation:softPulse 3s ease-in-out infinite}
+.hero .lead{font-size:16px}
+.hero .btn{margin-top:28px}
+.scroll-note{margin-top:34px;color:#ae8d99;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+.sparkle{position:absolute;color:#e6a4b7;animation:twinkle 3s ease-in-out infinite}
+@keyframes softPulse{50%{transform:scale(1.09)}}@keyframes twinkle{50%{opacity:.25;transform:scale(.7) rotate(25deg)}}
+.section-soft{background:linear-gradient(145deg,#fff2f5,#fff9f6)}
+.letter-shell{max-width:760px;margin:42px auto 0;perspective:1200px}
+.envelope-stage{min-height:330px;display:grid;place-items:center;position:relative}
+.envelope{width:min(430px,90vw);height:260px;position:relative;cursor:pointer;filter:drop-shadow(0 22px 24px rgba(125,64,88,.14));transition:transform .4s}
+.envelope:hover{transform:translateY(-5px)}
+.env-back{position:absolute;inset:0;background:#eeb2c3;border-radius:12px}
+.env-paper{position:absolute;left:7%;width:86%;height:88%;bottom:5%;background:#fffdfb;border:1px solid #f0dce3;border-radius:5px;display:flex;align-items:center;justify-content:center;text-align:center;padding:28px 22px;transition:transform .9s cubic-bezier(.2,.8,.2,1),z-index .1s;color:var(--deep);font:30px var(--script);z-index:1}
+.env-front{position:absolute;inset:0;background:linear-gradient(145deg,#f6cbd6,#e9a9bc);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);border-radius:10px;z-index:3}
+.env-flap{position:absolute;inset:0;background:linear-gradient(145deg,#f9dbe3,#e7a5b9);clip-path:polygon(0 0,100% 0,50% 61%);transform-origin:top;transition:transform .75s ease;z-index:4}
+.wax{position:absolute;z-index:5;left:50%;top:53%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#d889a2,#a84f70);color:#fff2f5;font:26px var(--serif);box-shadow:0 5px 12px #8e496055;transition:opacity .3s}
+.envelope.open .env-flap{transform:rotateX(180deg);z-index:0}
+.envelope.open .env-paper{transform:translateY(-112px);z-index:5}
+.envelope.open .wax{opacity:0}
+.tap-hint{font-size:11px;color:var(--muted);margin-top:10px}
+.letter-content{display:none;text-align:left;margin:12px auto 0;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:clamp(25px,5vw,48px);box-shadow:var(--shadow);animation:fadeUp .7s ease}
+.letter-content.show{display:block}
+.letter-content p{font:16px/1.95 var(--serif);font-size:19px;color:#634956}
+.letter-content .salute{font:30px var(--script);color:var(--rose)}
+.letter-content strong{color:var(--rose);font-weight:600}
+.signature{font:34px var(--script);color:var(--rose);margin-top:24px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:42px}
+.card{padding:27px;text-align:left;background:rgba(255,255,255,.82);border:1px solid var(--line);border-radius:22px;box-shadow:0 12px 36px rgba(129,66,91,.05)}
+.card-icon{font-size:27px}.card h3{font-size:27px}.card p{font-size:13px;color:var(--muted);margin:7px 0 0}
+.week{max-width:700px;margin:45px auto 0;text-align:left}
+.week-item{display:grid;grid-template-columns:54px 1fr;gap:17px;margin:0 0 25px;align-items:start}
+.week-icon{width:48px;height:48px;border-radius:50%;background:#ffedf2;display:grid;place-items:center;font-size:21px;border:1px solid #f5dce4}
+.week-item strong{color:var(--deep);font:600 21px var(--serif)}
+.week-item p{margin:4px 0 0;color:var(--muted);font-size:13px;line-height:1.75}
+.scrapbook{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:48px auto 0;max-width:850px}
+.polaroid{background:#fff;padding:12px 12px 43px;box-shadow:0 13px 28px rgba(93,53,70,.12);transform:rotate(var(--tilt));transition:transform .3s}
+.polaroid:hover{transform:rotate(0) translateY(-8px)}
+.photo-placeholder{height:190px;display:grid;place-items:center;position:relative;overflow:hidden;background:var(--photo-bg);color:#fff}
+.photo-placeholder:before,.photo-placeholder:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.38);border-radius:50%;width:180px;height:180px}
+.photo-placeholder:after{width:130px;height:130px}
+.photo-placeholder span{font-size:46px;filter:drop-shadow(0 5px 9px #70405244);z-index:1}
+.photo-placeholder small{position:absolute;bottom:12px;z-index:1;font-size:9px;letter-spacing:.15em;text-transform:uppercase}
+.polaroid figcaption{font:23px var(--script);text-align:center;color:#795264;margin-top:12px}
+.photo-help{font-size:11px;color:var(--muted);margin-top:20px}
+.feelings-box{max-width:720px;margin:38px auto 0;padding:clamp(25px,5vw,45px);border:1px solid var(--line);border-radius:28px;background:rgba(255,255,255,.82);box-shadow:var(--shadow)}
+.feeling-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:28px}
+.feeling{padding:17px;border-radius:15px;border:1px solid var(--line);background:#fffaf9;color:var(--deep);font-size:13px;text-align:left;transition:.2s}
+.feeling:hover,.feeling.selected{border-color:var(--rose);background:#fff0f4;transform:translateY(-2px)}
+.feeling span{display:block;font-size:23px;margin-bottom:7px}
+.feeling-result{display:none;margin-top:20px;padding:18px;background:#fff2f5;border-radius:15px;color:var(--deep);font-size:13px;line-height:1.8}
+.feeling-result.show{display:block;animation:fadeUp .35s ease}
+.promise-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;max-width:760px;margin:40px auto 0}
+.promise{background:white;border:1px solid var(--line);border-radius:17px;padding:20px;text-align:left;font-size:13px;line-height:1.75;color:var(--muted)}
+.promise b{color:var(--rose);display:block;margin-bottom:4px}
+.final-section{background:radial-gradient(ellipse at 50% 0,#ffe5ed,transparent 60%),#fff2f5;overflow:hidden}
+.final-note{max-width:680px;margin:38px auto 0;background:#fffdfb;border:1px solid var(--line);border-radius:4px;padding:clamp(28px,6vw,55px);box-shadow:var(--shadow);text-align:left;transform:rotate(-.5deg)}
+.final-note p{font:22px/1.75 var(--script);color:#765365}
+.final-note .sign{font:36px var(--script);color:var(--rose);text-align:right;margin-top:20px}
+.secret-wrap{margin:30px auto 0}
+.secret-btn{border:1px dashed #d99aaf;border-radius:999px;padding:13px 20px;background:#fff9fa;color:var(--rose);font-size:12px}
+.secret-message{display:none;max-width:520px;margin:18px auto 0;padding:22px;background:#fff;border:1px solid var(--line);border-radius:18px;color:var(--deep);font:25px/1.5 var(--script)}
+.secret-message.show{display:block;animation:fadeUp .5s ease}
+.music-control{position:fixed;right:18px;bottom:18px;z-index:30;display:flex;align-items:center;gap:9px;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(255,253,251,.94);box-shadow:0 8px 25px #71445518;color:var(--deep);font-size:11px}
+.music-control button{border:0;background:var(--blush);color:var(--rose);width:30px;height:30px;border-radius:50%;font-size:14px}
+.music-control input{max-width:125px;font-size:9px;color:var(--muted)}
+.music-status{max-width:120px}
+footer{text-align:center;padding:35px 18px;color:#aa8995;font-size:10px;letter-spacing:.06em}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+.petal{position:fixed;top:-35px;z-index:25;pointer-events:none;animation:petalFall linear forwards;opacity:.85}
+@keyframes petalFall{to{transform:translate3d(var(--drift),110vh,0) rotate(620deg);opacity:0}}
+@media(max-width:700px){
+  .topbar{height:60px}.progress{top:60px}.menu-btn{display:block}
+  .nav{display:none;position:absolute;top:60px;left:0;right:0;padding:18px 24px;background:#fffaf7;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:17px}
+  .nav.open{display:flex}.nav a{font-size:13px}
+  section{padding:76px 18px}.hero{min-height:83svh}
+  .cards,.promise-grid{grid-template-columns:1fr}.scrapbook{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+  .photo-placeholder{height:145px}.polaroid{padding:9px 9px 35px}
+  .polaroid figcaption{font-size:19px}.feeling-options{grid-template-columns:1fr}
+  .envelope{height:220px}.envelope-stage{min-height:275px}
+  .envelope.open .env-paper{transform:translateY(-92px)}
+  .music-control{right:10px;bottom:10px}.music-status{display:none}
+}
+@media(max-width:390px){.scrapbook{grid-template-columns:1fr}.photo-placeholder{height:190px}}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home">♡ For <span>Carina</span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav class="nav" id="nav">
+    <a href="#letter">THE LETTER</a><a href="#week">MY WEEK</a><a href="#memories">MEMORIES</a><a href="#feelings">YOUR FEELINGS</a><a href="#promises">MY PROMISES</a>
+  </nav>
+</header>
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<main>
+<section class="hero" id="home">
+  <span class="sparkle" style="top:17%;left:18%">✧</span><span class="sparkle" style="top:29%;right:19%;animation-delay:1s">✦</span><span class="sparkle" style="bottom:18%;left:25%;animation-delay:1.7s">✧</span>
+  <div class="hero-inner">
+    <div class="hero-mark">🌷</div>
+    <div class="kicker">A little corner of the world, just for you</div>
+    <h1>For Carina,<br>with all my heart.</h1>
+    <p class="lead">I made something small for you. Take your time, get comfy, and let me share a few things I've been wanting to say.</p>
+    <a class="btn" href="#letter">Open your little surprise <span>♡</span></a>
+    <div class="scroll-note">A little letter is waiting below · scroll gently</div>
+  </div>
+</section>
+
+<section id="letter">
+  <div class="wrap">
+    <div class="center reveal"><div class="kicker">First things first</div><h2>A letter I've been meaning to write.</h2><p class="lead">Tap the envelope to open it. I want you to read this at your own pace.</p></div>
+    <div class="letter-shell reveal">
+      <div class="envelope-stage">
+        <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open the letter">
+          <div class="env-back"></div>
+          <div class="env-paper">A little letter,<br>just for you, Carina ♡</div>
+          <div class="env-front"></div><div class="env-flap"></div><div class="wax">♡</div>
+        </div>
+      </div>
+      <p class="tap-hint center" id="tapHint">TAP THE ENVELOPE TO OPEN YOUR LETTER</p>
+      <article class="letter-content" id="letterContent">
+        <div class="salute">My sweetest Carina, ❤️</div>
+        <p>I know I've been distant these past few days, and I'm genuinely sorry that I made you feel like I didn't have time for you. I can understand why that hurt, and I don't want to brush those feelings aside.</p>
+        <p>My university workload became overwhelming. I had an Islamiat presentation and a 24-page article to prepare, a Physics PPT, and preparation for my Calculus and Workshop quizzes. I ended up spending my weekend trying to finish everything.</p>
+        <p>But I don't want to use all that as an excuse. I should have communicated with you instead of letting you feel forgotten. <strong>You are important to me, even on my busiest days.</strong></p>
+        <p>I may not always be able to talk for hours, but I can still send a message, tell you what's happening, and make sure you don't feel left out. I want to do better at that—not just say it.</p>
+        <p>I miss you, Carina. I miss our conversations, your little updates, your laughter, and all the random things we talk about. I hope this page makes you smile, even a little.</p>
+        <p>I'm sorry, my favourite person. ❤️</p>
+        <div class="signature">With love, always.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section-soft">
+  <div class="wrap center">
+    <div class="kicker reveal">A small reminder</div><h2 class="reveal">Busy doesn't mean forgotten.</h2>
+    <p class="lead reveal">These days were full of deadlines, but you were never unimportant. I wish I'd made more time to remind you of that.</p>
+    <div class="cards">
+      <article class="card reveal"><div class="card-icon">💬</div><h3>Your conversations</h3><p>I miss those little chats that can turn an ordinary day into a better one.</p></article>
+      <article class="card reveal"><div class="card-icon">🌷</div><h3>Your presence</h3><p>Even a simple “how was your day?” from you means more than you might think.</p></article>
+      <article class="card reveal"><div class="card-icon">🥰</div><h3>Your smile</h3><p>I love knowing that you're happy. I want to be someone who adds to that happiness.</p></article>
+      <article class="card reveal"><div class="card-icon">🫶</div><h3>Our little moments</h3><p>I don't need a special occasion to enjoy talking to you. The ordinary moments matter too.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="week">
+  <div class="wrap center">
+    <div class="kicker reveal">A tiny recap</div><h2 class="reveal">The little chaos of my week. 😅</h2>
+    <p class="lead reveal">Here's what swallowed up my weekend—not as an excuse, just so you know what was going on.</p>
+    <div class="week">
+      <div class="week-item reveal"><div class="week-icon">📚</div><div><strong>Islamiat took over</strong><p>A full chapter, a presentation, and a 24-page article. Yes… 24 pages!</p></div></div>
+      <div class="week-item reveal"><div class="week-icon">🖥️</div><div><strong>Physics joined the party</strong><p>Another PPT to prepare, because apparently one presentation wasn't enough.</p></div></div>
+      <div class="week-item reveal"><div class="week-icon">➗</div><div><strong>Calculus was waiting</strong><p>Quiz preparation had its own plans for my free time.</p></div></div>
+      <div class="week-item reveal"><div class="week-icon">🔧</div><div><strong>Workshop quiz too</strong><p>And one more thing to prepare for. My weekend disappeared!</p></div></div>
+    </div>
+    <p class="lead reveal">The workload was real. But I still could have communicated better, and I'm sorry I didn't.</p>
+  </div>
+</section>
+
+<section class="section-soft" id="memories">
+  <div class="wrap center">
+    <div class="kicker reveal">A little scrapbook</div><h2 class="reveal">Little moments, lovely memories.</h2>
+    <p class="lead reveal">The Love we both Share</p>
+    
+
+
+
+<div class="scrapbook">
+      
+<figure class="polaroid reveal" style="--tilt:-3deg">
+<img src="images/Guriya.png"
+     alt="Carina ⭐️"
+     class="memory-photo">
+<figcaption>Carina ⭐️</figcaption></figure>
+      
+
+<figure class="polaroid reveal" style="--tilt:2deg">
+<img src="images/CarinaCarino.jpg"
+     alt="A special memory"
+     class="memory-photo">
+<figcaption>Our kind of love 🌸</figcaption></figure>
+      
+
+<figure class="polaroid reveal" style="--tilt:-1deg">
+<img src="images/Me.jpg"
+     alt="A special memory"
+     class="memory-photo">
+<figcaption>Zayyan 🌕</figcaption></figure>
+    </div>
+
+</div>
+</section>
+
+<section id="feelings">
+  <div class="wrap center">
+    <div class="kicker reveal">Your feelings matter</div><h2 class="reveal">How are you feeling, Carina?</h2>
+    <p class="lead reveal">You don't have to pretend everything is okay. I want to understand how you feel, and there's no wrong answer.</p>
+    <div class="feelings-box reveal">
+      <h3>I'm listening. 💗</h3>
+      <div class="feeling-options" id="feelingOptions">
+        <button class="feeling" data-message="I'm glad things feel a little better. I still want to keep showing you through my actions that you matter to me."><span>💗</span>I'm okay now</button>
+        <button class="feeling" data-message="That's okay. I understand that an apology doesn't instantly fix how you felt. I'm here to listen."><span>🌷</span>I'm still a little upset</button>
+        <button class="feeling" data-message="Take all the time you need. I won't pressure you to feel differently before you're ready."><span>🥺</span>I need some time</button>
+        <button class="feeling" data-message="I want that too. I'd rather listen and understand than rush past what happened."><span>💌</span>I want to talk about it</button>
+      </div>
+      <div class="feeling-result" id="feelingResult" role="status" aria-live="polite"></div>
+      <p class="photo-help">This choice stays on this page; it isn't sent or saved anywhere.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-soft" id="promises">
+  <div class="wrap center">
+    <div class="kicker reveal">Not just words</div><h2 class="reveal">Things I want to do better.</h2>
+    <p class="lead reveal">I can't promise I'll never be busy. I can promise to make a better effort to keep you in the loop.</p>
+    <div class="promise-grid">
+      <div class="promise reveal">💌 <b>I'll communicate.</b>If I'm swamped, I'll tell you instead of disappearing.</div>
+      <div class="promise reveal">⏰ <b>I'll make time.</b>I'll try to set aside proper, distraction-free time for us.</div>
+      <div class="promise reveal">❤️ <b>I'll listen.</b>I'll make space for your feelings instead of getting defensive.</div>
+      <div class="promise reveal">🌷 <b>I'll show effort.</b>Not only through words, but through small, consistent actions.</div>
+    </div>
+  </div>
+</section>
+
+<section class="final-section">
+  <div class="wrap center">
+    <div class="hero-mark reveal">💞</div><div class="kicker reveal">One last thing</div>
+    <h2 class="reveal">If I could make one wish…</h2>
+    <p class="lead reveal">It would be for us to have the chance to understand each other a little better, talk honestly, and make some happier memories from here.</p>
+    <article class="final-note reveal">
+      <p>Carina, I don't expect one website or one apology to make everything instantly okay. I just wanted to show you that I care enough to pause, think, and try to make something heartfelt for you.</p>
+      <p>You deserve care that you can feel, communication you don't have to ask for, and effort that stays consistent. I want to work on giving you that.</p>
+      <p>Thank you for taking the time to read this. Whatever you're feeling, I want to hear it.</p>
+      <div class="sign">With love, always. ❤️</div>
+    </article>
+    <div class="secret-wrap reveal">
+      <button class="secret-btn" id="secretBtn" aria-expanded="false">Psst… there's one tiny secret ♡</button>
+      <div class="secret-message" id="secretMessage">If I could choose one notification to receive right now, it would be a message from you. 🥹💗</div>
+    </div>
+    <div style="margin-top:32px" class="reveal"><button class="btn" id="hugBtn">A virtual hug for you 🤗</button></div>
+    <p id="hugMessage" class="lead" style="display:none;margin-top:20px;color:var(--rose)">Sending you the warmest, gentlest hug. 🤗💗</p>
+  </div>
+</section>
+</main>
+<footer>Made with care, especially for Carina. ♡</footer>
+
+<div class="music-control" aria-label="Background music controls">
+  <button id="musicBtn" aria-label="Play background music" title="Play or pause music">▶</button>
+  <span class="music-status" id="musicStatus">Add your song</span>
+
+</div>
+<audio id="bgMusic" src="music/our-song.mp3" loop preload="auto"></audio>
+
+<script>
+
+
+
+
+(() => {
+  const progress = document.getElementById('progressBar');
+  const updateProgress = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (max > 0 ? window.scrollY / max * 100 : 0) + '%';
+  };
+  window.addEventListener('scroll', updateProgress, {passive:true});
+  updateProgress();
+
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('nav');
+  menuBtn.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.textContent = open ? '×' : '☰';
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); menuBtn.textContent='☰';
+  }));
+
+  const envelope = document.getElementById('envelope');
+  const openLetter = () => {
+    envelope.classList.add('open');
+    document.getElementById('letterContent').classList.add('show');
+    document.getElementById('tapHint').textContent = 'A LETTER, FROM ME TO YOU ♡';
+    setTimeout(() => document.getElementById('letterContent').scrollIntoView({behavior:'smooth',block:'nearest'}), 450);
+  };
+  envelope.addEventListener('click', openLetter);
+  envelope.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLetter(); }
+  });
+
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); }
+    });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  document.querySelectorAll('.feeling').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.feeling').forEach(b => b.classList.remove('selected'));
+      button.classList.add('selected');
+      const result = document.getElementById('feelingResult');
+      result.textContent = button.dataset.message;
+      result.classList.add('show');
+    });
+  });
+
+  document.getElementById('secretBtn').addEventListener('click', () => {
+    const message = document.getElementById('secretMessage');
+    const show = !message.classList.contains('show');
+    message.classList.toggle('show', show);
+    document.getElementById('secretBtn').setAttribute('aria-expanded', String(show));
+    document.getElementById('secretBtn').textContent = show ? 'You found my little secret ♡' : 'Psst… there’s one tiny secret ♡';
+  });
+  document.getElementById('hugBtn').addEventListener('click', () => {
+    document.getElementById('hugMessage').style.display = 'block';
+    burstPetals(20);
+  });
+
+  // Optional local music: choose an audio file from your own device.
+
+// Background music
+const audio = document.getElementById('bgMusic');
+const musicBtn = document.getElementById('musicBtn');
+const musicStatus = document.getElementById('musicStatus');
+
+audio.volume = 0.35;
+
+function updateMusicButton() {
+    if (audio.paused) {
+        musicBtn.textContent = '▶';
+        musicBtn.setAttribute('aria-label', 'Play background music');
+    } else {
+        musicBtn.textContent = 'Ⅱ';
+        musicBtn.setAttribute('aria-label', 'Pause background music');
+        musicStatus.textContent = 'Playing our song ♡';
+    }
+}
+
+// Try autoplay when the page loads
+audio.play().then(() => {
+    updateMusicButton();
+}).catch(() => {
+    musicStatus.textContent = 'Tap anywhere for music ♡';
+});
+
+// Start music after the visitor interacts with the page
+function startMusic() {
+    if (audio.paused) {
+        audio.play().then(updateMusicButton).catch(() => {
+            musicStatus.textContent = 'Please tap play ♡';
+        });
+    }
+}
+
+document.addEventListener('pointerdown', startMusic, { once: true });
+document.addEventListener('keydown', startMusic, { once: true });
+
+// Play/pause button
+musicBtn.addEventListener('click', async () => {
+    if (audio.paused) {
+        try {
+            await audio.play();
+            updateMusicButton();
+        } catch {
+            musicStatus.textContent = 'Could not play song';
+        }
+    } else {
+        audio.pause();
+        musicBtn.textContent = '▶';
+        musicBtn.setAttribute('aria-label', 'Play background music');
+        musicStatus.textContent = 'Paused ♡';
+    }
+});
+
+audio.addEventListener('play', updateMusicButton);
+audio.addEventListener('pause', updateMusicButton);
+
+  let petalTimer;
+  function burstPetals(count) {
+    const symbols = ['🌸','✿','❀','♡'];
+    for (let i=0;i<count;i++) {
+      const petal = document.createElement('span');
+      petal.className = 'petal';
+      petal.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+      petal.style.left = Math.random()*100+'vw';
+      petal.style.setProperty('--drift', (Math.random()*180-90)+'px');
+      petal.style.animationDuration = (4+Math.random()*3)+'s';
+      petal.style.fontSize = (13+Math.random()*14)+'px';
+      document.body.appendChild(petal);
+      setTimeout(() => petal.remove(), 7500);
+    }
+  }
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    petalTimer = setInterval(() => {
+      if (document.visibilityState === 'visible' && Math.random() > .35) burstPetals(1);
+    }, 2600);
+  }
+})();
+
+
+
+</script>
+</body>
+</html>
